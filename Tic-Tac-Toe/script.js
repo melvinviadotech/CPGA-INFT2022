@@ -4,36 +4,46 @@ let playerSymbol = "X";
 let winner;
 
 const mainContainer = document.querySelector(".main-container");
+const message = document.querySelector("#player");
 
 mainContainer.addEventListener("click", (event) => {
-    console.log(event.target);
     let squares = document.querySelectorAll(".box");
-    console.log(squares);
 
-    if (event.target.innerText == "") {
-        event.target.innerText = playerSymbol;
+    if (winner != undefined || message.innerText == "Draw") {
+        for (let i = 0; i < squares.length; i++) {
+            squares[i].textContent = "";
+        }
+
+        message.innerText = "";
+        winner = undefined;
+    } else {
+        if (event.target.innerText == "") {
+            event.target.innerText = playerSymbol;
+        
+            if (playerSymbol == "X") {
+                playerSymbol = "O";
+            } else {
+                playerSymbol = "X"
+            }
     
-        if (playerSymbol == "X") {
-            playerSymbol = "O";
-        } else {
-            playerSymbol = "X"
+            let symbols = [];
+    
+            for (let i = 0; i < squares.length; i++) {
+                symbols.push(squares[i].textContent);
+            }
+
+            if (symbols.every((symbol) => { return symbol != ""})) {
+                message.innerText = "Draw";
+            } else {
+                checkWinner(symbols);
+            }
         }
     }
-
-    let symbols = [];
-
-    for (let i = 0; i < squares.length; i++) {
-        symbols.push(squares[i].textContent);
-    }
-    console.log(symbols);
-    checkWinner(symbols);
 });
 
 var sequence = [];
 
 function checkWinner(symbols) {
-    console.log(symbols);
-
     for (let i = 0; i < 3; i++) {
         for (let j = i; j <= 8; j = j + 3) {
             sequence.push(symbols[j]);
@@ -49,50 +59,32 @@ function checkWinner(symbols) {
     }
 
     for (let i = 0; i <= 8; i = i + 4) {
-        sequence.push(symbols[j]);
+        sequence.push(symbols[i]);
     }
 
     checkSequence(sequence);
 
     for (let i = 2; i < 8; i = i + 2) {
-        sequence.push(symbols[j]);
+        sequence.push(symbols[i]);
     }
 
     checkSequence(sequence);
 
-    document.querySelector("#player").innerText = winner;
+    
 }
 
 function checkSequence(seq) {
     if (seq.every((symbol) => { return symbol == "X" })) {
-        winner = "Winner is X";
+        winner = "X WINS";
     }
 
     if (seq.every((symbol) => { return symbol == "O" })) {
-        winner = "winner is O";
+        winner = "O WINS";
+    }
+
+    if (winner != undefined) {
+        message.innerText = winner;
     }
 
     sequence = [];
 }
-// for (let i = 0; i < 9; i++) {
-//     let boxNum = "box-" + (i + 1).toString();
-
-//     console.log(boxNum);
-
-//     let clickableBox = document.getElementById(boxNum);
-
-//     console.log(clickableBox);
-
-    
-//     clickableBox.addEventListener("click", function (event) {
-//         clickableBox.textContent = playerSymbol;
-
-//         if (playerSymbol == "X") {
-//             playerSymbol = "O";
-//         } else {
-//             playerSymbol = "X";
-//         }
-//         console.log("Firing");
-//     });
-//     console.log(playerSymbol);
-// }
