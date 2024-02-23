@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./scripts/app.js"></script>
+    <script defer src="./scripts/register.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/b62720f9c4.js" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link ref="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css" />
+    <title id="title"></title>
+</head>
+<body class="bg-dark text-light">
+    <!-- Nav Bar -->
+    <nav class="bg-dark navbar navbar-expand-lg navbar-dark bg-dark bg-gradient">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" id="navbar-title" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbarList">
+            <li class="nav-item">
+              <i class="fa-solid fa-house d-inline text-light"></i>
+              <a class="nav-link active d-inline text-light" id="home-link" aria-current="page" href="./index.html"></a>
+            </li>
+            <li class="nav-item">
+              <i class="fa-solid fa-shapes text-light"></i>
+              <a class="nav-link active d-inline text-light" id="product-link" aria-current="page" href="./product.html"></a>
+            </li>
+            <li class="nav-item">
+              <i class="fa-solid fa-bell text-light"></i>
+              <a class="nav-link active d-inline text-light" id="services-link" aria-current="page" href="./services.html"></a>
+            </li>
+            <li class="nav-item">
+              <i class="fa-solid fa-circle-info text-light"></i>
+              <a class="nav-link active d-inline text-light" id="about-us-link" aria-current="page" href="./about.html"></a>
+            </li>
+            <li class="nav-item">
+              <i class="fa-solid fa-phone text-light"></i>
+              <a class="nav-link active d-inline text-light" id="contact-us-link" aria-current="page" href="./contact.html"></a>
+            </li>
+            <hr />
+            <li class="nav-item">
+              <i class="fa-solid fa-id-card"></i>
+              <span class="nav-link active d-inline text-light" id="username"></span>
+            </li>
+            <hr />
+            <li class="nav-item">
+              <i class="fa-solid fa-user"></i>
+              <a class="nav-link active d-inline text-light" id="login-link" aria-current="page" href="./login.html"></a>
+            </li>
+            <li class="nav-item">
+              <i class="fa-regular fa-user"></i>
+              <a class="nav-link active d-inline text-light" id="register-link" aria-current="page" href="./register.html"></a>
+            </li>
+          </ul>
+          <form class="d-flex">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="min-vh-100 text-left m-0 d-flex flex-column justify-content-center">
+      <h1 class="m-0" id="registerTitle">Register</h1>
+      <form id="contact-form" class="mx-auto my-0">
+        <div class="form-group">
+          <label for="inputFirstName">First Name</label>
+          <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
+        </div>
+        <div class="form-group">
+          <label for="inputLastName">Last Name</label>
+          <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+          <label for="inputEmail">Email</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="inputPassword">Password</label>
+          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="inputConfirmPassword">Confirm Password</label>
+          <input type="password" class="form-control" id="inputConfirmPassword" placeholder="Confirm Password">
+        </div>
+        <button id="login-form-button" type="button" class="btn btn-primary my-3">Login</button>
+      </form>
+    </div>
+
+    <nav class="navbar fixed-bottom navbar-dark bg-dark bg-gradient justify-content-end">
+      <p id="copyright-statement"></p>
+    </nav>
+</body>
+</html>

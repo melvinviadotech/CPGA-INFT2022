@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./scripts/app.js"></script>
+    <script defer src="./scripts/services.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/b62720f9c4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link ref="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css" />
+    <title id="title"></title>
+</head>
+<body class="bg-dark text-light">
+    <!-- Nav Bar -->
+    <nav class="bg-dark navbar navbar-expand-lg navbar-dark bg-dark bg-gradient">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" id="navbar-title" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbarList">
+            <li class="nav-item">
+              <i class="fa-solid fa-house d-inline text-light"></i>
+              <a class="nav-link active d-inline text-light" id="home-link" aria-current="page" href="./index.html"></a>
+            </li>
+            <li class="nav-item">
+              <i class="fa-solid fa-shapes text-light"></i>
+              <a class="nav-link active d-inline text-light" id="product-link" aria-current="page" href="./product.html"></a>
+            </li>
+            <li class="nav-item">
+              <i class="fa-solid fa-bell text-light"></i>
+              <a class="nav-link active d-inline text-light" id="services-link" aria-current="page" href="./services.html"></a>
+            </li>
+            <li class="nav-item">
+              <i class="fa-solid fa-circle-info text-light"></i>
+              <a class="nav-link active d-inline text-light" id="about-us-link" aria-current="page" href="./about.html"></a>
+            </li>
+            <li class="nav-item">
+              <i class="fa-solid fa-phone text-light"></i>
+              <a class="nav-link active d-inline text-light" id="contact-us-link" aria-current="page" href="./contact.html"></a>
+            </li>
+            <hr />
+            <li class="nav-item">
+              <i class="fa-solid fa-id-card"></i>
+              <span class="nav-link active d-inline text-light" id="username"></span>
+            </li>
+            <hr />
+            <li class="nav-item">
+              <i class="fa-solid fa-user"></i>
+              <a class="nav-link active d-inline text-light" id="login-link" aria-current="page" href="./login.html"></a>
+            </li>
+            <li class="nav-item">
+              <i class="fa-regular fa-user"></i>
+              <a class="nav-link active d-inline text-light" id="register-link" aria-current="page" href="./register.html"></a>
+            </li>
+          </ul>
+          <form class="d-flex">
+          </form>
+        </div>
+      </div>
+    </nav>
+  
+      <div class="min-vh-100 text-center m-0 d-flex flex-column justify-content-center">
+          <h1 id="services-title"></h1>
+          <p class="skill" id="skill-one"></p>
+          <img class="skills-image" src="./images/cobolprogramming.png" />
+          <p class="skill" id="skill-two"></p>
+          <img class="skills-image" src="./images/oop.png" />
+          <p class="skill" id="skill-three"></p>
+          <img class="skills-image" src="./images/communication.webp" />
+          <a class="btn btn-primary" id="github" href="https://github.com/melvinviadotech/CPGA-INFT2022"></a>
+      </div>
+  
+      <nav class="navbar fixed-bottom navbar-dark bg-dark bg-gradient justify-content-end">
+        <p id="copyright-statement"></p>
+      </nav>
+</body>
+</html>
