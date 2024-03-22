@@ -1,0 +1,94 @@
+body {
+  font-family: Helvetica;
+  font-weight: bolder;
+}
+
+.navbar-nav > li{
+    padding-right: 20px;
+  }
+
+.nav-bar-toggler {
+  color: white;
+}
+
+#welcome-text {
+  padding: 15px;
+}
+
+#interesting-image {
+  width: 300px;
+  height: 350px;
+  border-radius: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1 {
+  text-align: center;
+}
+
+.media {
+  padding: 0 20% 0 20%;
+}
+
+.media-pieces {
+  max-height: 180px;
+  max-width: 180px;
+  width: auto;
+  height: auto;
+  border-radius: 20px;
+}
+
+#copyright-statement {
+  padding-right: 10px;
+  margin: 0;
+}
+
+.skill {
+  padding-top: 20px;
+  margin-bottom: 5px;
+}
+
+.skills-image {
+  margin: 0 auto;
+  height: 230px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+#github {
+  margin: 20px auto 60px;
+  width: 300px;
+  height: 70px;
+  font-size: 28px;
+  padding-top: 10px;
+}
+
+#avatar {
+  margin: 0 auto 10px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+
+#contact-form {
+  margin-top: 10px;
+  max-width: 300px;
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#contact-form-button {
+  margin-top: 10px;
+}
+
+#content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
