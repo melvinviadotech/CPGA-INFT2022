@@ -1,0 +1,36 @@
+<%- include("partials/header.ejs")%>
+
+<h2>Edit Pokemon </h2>
+
+<form action="/editPokemon" method="POST">
+    <table>
+        <tr>
+            <td>
+                <p>Name: </p>
+            </td>
+            <td>
+                <input type="text" value="<%= myPokemon.name %>" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Height: </p>
+            </td>
+            <td>
+                <input type="number" value="<%= myPokemon.height %>" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="<%= myPokemon.photo %>">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="Submit" value="Submit" />
+            </td>
+        </tr>
+    </table>
+</form>
+
+<%- include("partials/footer.ejs")%>
