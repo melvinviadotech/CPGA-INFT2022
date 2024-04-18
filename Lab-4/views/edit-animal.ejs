@@ -1,0 +1,109 @@
+<%- include('partials/header.ejs')%>
+
+<h1>Edit Animal Entry</h1>
+
+<div class="card">
+  <div class="card-header">
+    <h3 style="margin: 0;">Edit Animal</h3>
+  </div>
+  <div class="card-body">
+    <form action="/editAnimal" method="post">
+      <input type="hidden" value="<%= animalData.id %>" name="id" /> 
+      <div class="form-group">
+        <label for="homeZoo">Home Zoo</label>
+        <input type="text" class="form-control" name="zoo" id="zoo" value="<%= animalData.zoo %>">
+      </div>
+        <div class="form-group">
+        <label for="scientificName">Scientific Name</label>
+        <input type="text" class="form-control" name="scientificName" id="scientificName" value="<%= animalData.scientificName %>">
+      </div>
+      <div class="form-group">
+        <label for="commonName">Common Name</label>
+        <input type="text" class="form-control" name="commonName" id="commonName" value="<%= animalData.commonName %>">
+      </div>
+      <div class="form-group">
+        <label for="givenName">Given Name</label>
+        <input type="text" class="form-control" name="givenName" id="givenName" value="<%= animalData.givenName %>">
+      </div>
+      <div class="form-group">
+        <label>Gender</label>
+      </div>
+      <div class="form-group">
+        <div class="form-check form-check-inline">
+          <input 
+            class="form-check-input" 
+            type="radio" 
+            name="gender" 
+            id="male" 
+            value="male" 
+            <% if (animalData.gender = "male") { %>
+              checked
+            <% } %>
+          >
+          <label class="form-check-label" for="male">Male</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input 
+            class="form-check-input" 
+            type="radio" 
+            name="gender" 
+            id="female" 
+            value="female" 
+            <% if (animalData.gender = "female") { %>
+              checked
+            <% } %>
+          >
+          <label class="form-check-label" for="female">Female</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="dateOfBirth">Date of Birth</label>
+        <input type="date" class="form-control" name="dateOfBirth" id="dateOfBirth" value="<%= animalData.dateOfBirth %>">
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" class="form-control" name="age" id="age" value="<%= animalData.age %>">
+      </div>
+      <div class="form-group">
+        <label>Is Transportable</label>
+      </div>
+      <div class="form-group">
+        <div class="form-check form-check-inline">
+          <input 
+            class="form-check-input" 
+            type="radio" 
+            name="isTransportable" 
+            id="available" 
+            value="true"
+            <% if (animalData.isTransportable = true) { %>
+              checked
+            <% } %>
+          >
+          <label class="form-check-label" for="available">Available</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input 
+            class="form-check-input" 
+            type="radio" 
+            name="isTransportable" 
+            id="unavailable" 
+            value="false"
+            <% if (animalData.isTransportable = false) { %>
+              checked
+            <% } %>
+          >
+          <label class="form-check-label" for="unavailable">Unavailable</label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Edit Animal</button>
+      
+    </form>
+    <form action="/deleteAnimal" method="post">
+      <input type="hidden" value="<%= animalData.id %>" name="id" /> 
+      <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+  </div>
+</div>
+
+
+<%- include('partials/footer.ejs')%>

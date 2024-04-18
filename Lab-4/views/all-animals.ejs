@@ -1,0 +1,53 @@
+<%- include('partials/header.ejs')%>
+
+<h1>List of All Animals</h1>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Zoo</th>
+      <th scope="col">Scientific Name</th>
+      <th scope="col">Common Name</th>
+			<th scope="col">Given Name</th>
+			<th scope="col">Gender</th>
+			<th scope="col">Date of Birth</th>
+			<th scope="col">Age</th>
+			<th scope="col">Transportability?</th>
+			<th scope="col">Edit Animal Details</th>
+    </tr>
+  </thead>
+	<tbody>
+		<% myAnimals.forEach(animal => { %>
+			<tr>
+				<td><%= animal.zoo %></td>
+				<td><%= animal.scientificName %></td>
+				<td><%= animal.commonName %></td>
+				<td><%= animal.givenName %></td>
+				<td><%= animal.gender %></td>
+				<td><%= animal.dateOfBirth %></td>
+				<td><%= animal.age %></td>
+				<td><%= animal.isTransportable %></td>
+				<td>
+					<form action="/editAnimalPage" style="margin: 0;" method="post">
+						<input type="hidden" value="<%= animal._id %>" name="id" /> 
+						<input type="hidden" value="<%= animal.zoo %>" name="zoo" /> 
+            <input type="hidden" value="<%= animal.scientificName %>" name="scientificName" />
+            <input type="hidden" value="<%= animal.commonName %>" name="commonName"/>
+            <input type="hidden" value="<%= animal.givenName %>" name="givenName" />
+            <input type="hidden" value="<%= animal.gender %>" name="gender" />
+            <input type="hidden" value="<%= animal.dateOfBirth %>" name="dateOfBirth" />
+            <input type="hidden" value="<%= animal.age %>" name="age" />
+            <input type="hidden" value="<%= animal.isTransportable %>" name="isTransportable" />
+						<button class="btn btn-dark" type="submit">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+								<path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z"/>
+							</svg>
+						</button>
+					</form>
+				</td>
+			</tr>
+		<% }) %>
+	</tbody>
+</table>
+
+<%- include('partials/footer.ejs')%>

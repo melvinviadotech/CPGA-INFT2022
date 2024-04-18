@@ -1,0 +1,70 @@
+<%- include('partials/header.ejs')%>
+
+  <h1>Add an Animal to the Database</h1>
+
+  <div class="card">
+    <div class="card-header">
+      <h3 style="margin: 0;">Add Animal</h3>
+    </div>
+    <div class="card-body">
+      <form action="/saveAnimal" method="post">
+        <div class="form-group">
+          <label for="homeZoo">Home Zoo</label>
+          <input type="text" class="form-control" name="homeZoo" id="homeZoo">
+        </div>
+          <div class="form-group">
+          <label for="scientificName">Scientific Name</label>
+          <input type="text" class="form-control" name="scientificName" id="scientificName">
+        </div>
+        <div class="form-group">
+          <label for="commonName">Common Name</label>
+          <input type="text" class="form-control" name="commonName" id="commonName">
+        </div>
+        <div class="form-group">
+          <label for="givenName">Given Name</label>
+          <input type="text" class="form-control" name="givenName" id="givenName">
+        </div>
+        <div class="form-group">
+          <label>Gender</label>
+        </div>
+        <div class="form-group">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+            <label class="form-check-label" for="male">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+            <label class="form-check-label" for="female">Female</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="dateOfBirth">Date of Birth</label>
+          <input type="date" class="form-control" name="dateOfBirth" id="dateOfBirth">
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" class="form-control" name="age" id="age">
+        </div>
+        <div class="form-group">
+          <label>Is Transportable</label>
+        </div>
+        <div class="form-group">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="isTransportable" id="available" value="true">
+            <label class="form-check-label" for="available">Available</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="isTransportable" id="unavailable" value="false">
+            <label class="form-check-label" for="unavailable">Unavailable</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Animal to Database</button>
+        <button type="button" class="btn btn-primary">Reset</button>
+      </form>
+    </div>
+  </div>
+
+
+
+<%- include('partials/footer.ejs')%>
+
